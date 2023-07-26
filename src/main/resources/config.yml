@@ -1,0 +1,7 @@
+Enabled: true
+MeFormat: "%player% * %message% *"
+DoFormat: "* %message%"
+TryFormat: "%player% * %message% * | %result%"
+TryWin: "&aУспех"
+TryLose: "&cПровал"
+Radius: 100.0

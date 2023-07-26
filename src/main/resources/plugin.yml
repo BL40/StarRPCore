@@ -1,0 +1,14 @@
+name: LocalRP
+version: '${project.version}'
+main: dev.bronzylobster.localrp.LocalRP
+api-version: 1.20
+prefix: DNC_RP
+authors: [BL40]
+description: Special for DNC
+commands:
+  locme:
+    aliases: me
+  locdo:
+    aliases: do
+  loctry:
+    aliases: try
