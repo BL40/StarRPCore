@@ -35,5 +35,3 @@ public class loctry extends AbstractCommand{
         }.runTaskAsynchronously(LocalRP.getInstance());
     }
 }
-
-}
