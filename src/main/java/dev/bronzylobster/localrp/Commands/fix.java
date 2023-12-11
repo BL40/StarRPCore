@@ -1,7 +1,6 @@
 package dev.bronzylobster.localrp.Commands;
 
 import dev.bronzylobster.localrp.LocalRP;
-import dev.bronzylobster.localrp.Utils.Utils;
 import net.kyori.adventure.text.Component;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -10,24 +9,21 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Collection;
 
-public class locme extends AbstractCommand{
-    public locme() {
-        super("locme");
+public class fix extends AbstractCommand{
+    public fix() {
+        super("fix");
     }
-
-    FileConfiguration config = LocalRP.getInstance().getConfig();
 
     @Override
     public void execute(CommandSender sender, String[] s) {
-        Component msg = Utils.Placeholders(config.getString("MeFormat"), sender, "NULL", s, "NULL");
-
-       Collection<Player> viewers = ((Player) sender).getLocation().getNearbyPlayers(config.getDouble("Radius"));
+        Collection<? extends Player> op = LocalRP.getInstance().getServer().getOnlinePlayers();
 
         new BukkitRunnable() {
             @Override
             public void run() {
-                for (Player viewer: viewers) {
-                    viewer.sendMessage(msg);
+                for (Player p: op) {
+                    p.setCustomNameVisible(false);
+                    p.displayName(Component.text(p.getName()));
                 }
             }
         }.runTaskAsynchronously(LocalRP.getInstance());

@@ -19,7 +19,7 @@ public class locdo extends AbstractCommand{
 
     @Override
     public void execute(CommandSender sender, String[] s) {
-        Component msg = Utils.Placeholders(config.getString("DoFormat"), sender, "NULL", s);
+        Component msg = Utils.Placeholders(config.getString("DoFormat"), sender, "NULL", s, "NULL");
 
         Collection<Player> viewers = ((Player) sender).getLocation().getNearbyPlayers(config.getDouble("Radius"));
 

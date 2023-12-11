@@ -21,7 +21,7 @@ public class loctry extends AbstractCommand{
     public void execute(CommandSender sender, String[] s) {
         String res = Math.random() > 0.5 ? config.getString("TryWin") : config.getString("TryLose");
 
-        Component msg = Utils.Placeholders(config.getString("TryFormat"), sender, res, s);
+        Component msg = Utils.Placeholders(config.getString("TryFormat"), sender, res, s, "NULL");
 
         Collection<Player> viewers = ((Player) sender).getLocation().getNearbyPlayers(config.getDouble("Radius"));
 

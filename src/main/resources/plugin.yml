@@ -2,13 +2,23 @@ name: LocalRP
 version: '${project.version}'
 main: dev.bronzylobster.localrp.LocalRP
 api-version: 1.20
-prefix: DNC_RP
+prefix: DNCRP
 authors: [BL40]
 description: Special for DNC
+permissions:
+  DNCRP.me:
+    default: true
+  dncfix:
+    default: op
 commands:
   locme:
-    aliases: me
+    aliases: [me, mee]
+    permission: DNCRP.me
   locdo:
     aliases: do
   loctry:
     aliases: try
+  locroll:
+    aliases: roll
+  fix:
+    permission: dncfix

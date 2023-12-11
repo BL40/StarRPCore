@@ -10,18 +10,26 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Collection;
 
-public class locme extends AbstractCommand{
-    public locme() {
-        super("locme");
+public class locroll extends AbstractCommand{
+    public locroll() {
+        super("locroll");
     }
 
     FileConfiguration config = LocalRP.getInstance().getConfig();
 
     @Override
     public void execute(CommandSender sender, String[] s) {
-        Component msg = Utils.Placeholders(config.getString("MeFormat"), sender, "NULL", s, "NULL");
+        int max = s.length > 0 ? Utils.getNumber(s[0], sender) : 6;
+        if (max > config.getInt("RollMax")) {
+            max = config.getInt("RollMax");
+        } else if (max < config.getInt("RollMin")) {
+            max = config.getInt("RollMin");
+        }
+        int res = (int) (Math.random() * max + 1);
 
-       Collection<Player> viewers = ((Player) sender).getLocation().getNearbyPlayers(config.getDouble("Radius"));
+        Component msg = Utils.Placeholders(config.getString("RollFormat"), sender, String.valueOf(res), s, String.valueOf(max));
+
+        Collection<Player> viewers = ((Player) sender).getLocation().getNearbyPlayers(config.getDouble("Radius"));
 
         new BukkitRunnable() {
             @Override
