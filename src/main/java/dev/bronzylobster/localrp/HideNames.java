@@ -40,7 +40,7 @@ public class HideNames implements Listener {
         Player interactee = e.getRightClicked() instanceof Player ? (Player) e.getRightClicked() : null;
 
         if (interactee != null) {
-            interacter.sendActionBar(Component.text(interactee.getName()).color(TextColor.color(0x666666)));
+            interacter.sendActionBar(Component.text(interactee.getName()).color(TextColor.color(0xFFFFFF)));
         }
     }
 }

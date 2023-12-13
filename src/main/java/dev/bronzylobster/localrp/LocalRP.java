@@ -13,7 +13,7 @@ public final class LocalRP extends JavaPlugin {
 
     @Getter
     private static LocalRP instance;
-    private final Scoreboard scoreboard = getServer().getScoreboardManager().getMainScoreboard();
+    private Scoreboard scoreboard;
     @Getter
     private Team team;
 
@@ -28,8 +28,10 @@ public final class LocalRP extends JavaPlugin {
         new loctry();
         new locroll();
         new fix();
+        new hub();
 
         // Plugin startup logic
+        scoreboard = getServer().getScoreboardManager().getMainScoreboard();
 
         if (scoreboard.getTeam("hide") == null) {
             scoreboard.registerNewTeam("hide");

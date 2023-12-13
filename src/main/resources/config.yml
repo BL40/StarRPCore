@@ -1,7 +1,7 @@
 Enabled: true
 HideNames: true
 MeFormat: "&5*%player% %message%"
-DoFormat: "&5*%player* %message%"
+DoFormat: "&5*%player%* %message%"
 TryFormat: "&5*%player% %message% &r| &5%result%"
 TryWin: "&aУспех"
 TryLose: "&cПровал"
