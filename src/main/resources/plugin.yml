@@ -22,3 +22,5 @@ commands:
     aliases: roll
   fix:
     permission: dncfix
+  hub:
+    aliases: lobby
