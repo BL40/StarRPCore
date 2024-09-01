@@ -33,14 +33,13 @@ public class effclr extends AbstractCommand{
         Player p = Bukkit.getPlayer(s[0]);
         assert p != null;
         if (len == 1) {
-            db.remove(s[0]);
-
             ArrayList<String> effs = db.getEffects(s[0]);
 
             for (String eff: effs) {
                 p.removePotionEffect(PotionEffectType.getByName(eff));
             }
 
+            db.remove(s[0]);
             sender.sendMessage("C игрока " + s[0] + " сняты все вечные эффекты");
         } else if (len == 2){
             db.remove(s[0], s[1]);

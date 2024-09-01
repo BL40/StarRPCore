@@ -36,8 +36,16 @@ public class infeff extends AbstractCommand{
             return;
         }
 
+        boolean par = true;
+        if (s.length == 4) {
+            String spar = s[3];
+            if (spar.equals("false")) {
+                par = false;
+            }
+        }
+
         int lvl = Utils.getNumber(s[2], sender);
-        PotionEffect peff = new PotionEffect(eff, -1, lvl, true, true, true);
+        PotionEffect peff = new PotionEffect(eff, -1, lvl, true, par, true);
         p.addPotionEffect(peff);
         db.add(s[0], s[1], lvl);
         sender.sendMessage("На игрока " + s[0] + " наложен вечный эффект " + s[1] + " " + s[2] + " уровня");

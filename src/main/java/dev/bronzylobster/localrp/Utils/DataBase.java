@@ -45,10 +45,11 @@ public class DataBase {
             Statement s = c.createStatement();
 
             ResultSet rs = s.executeQuery("SELECT effect FROM effects WHERE player = '" + nick + "'");
-
-            while(!rs.isAfterLast()) {
-                result.add(rs.getString(1));
-                rs.next();
+            if (rs.getString(1) != null) {
+                while (!rs.isAfterLast()) {
+                    result.add(rs.getString(1));
+                    rs.next();
+                }
             }
 
             s.close();
@@ -57,7 +58,7 @@ public class DataBase {
             return result;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+            return new ArrayList<>();
         }
     }
 

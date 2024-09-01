@@ -5,11 +5,8 @@ import dev.bronzylobster.localrp.Utils.DataBase;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 
@@ -30,13 +27,11 @@ public class Eff implements Listener {
         Player p = e.getPlayer();
         ArrayList<String> effe = db.getEffects(p.getName());
 
-        if (effe == null || effe.isEmpty()) {
-            return;
-        }
-
-        for (String eff : effe) {
+        if (!(effe == null || effe.isEmpty())) {
+            for (String eff : effe) {
             int lvl = db.getEffectLVL(p.getName(), eff);
-            p.addPotionEffect(new PotionEffect(PotionEffectType.getByName(eff), -1, lvl, true, true, true));
+            p.addPotionEffect(new PotionEffect(PotionEffectType.getByName(eff), -1, lvl, true, false, true));
+            }
         }
     }
 

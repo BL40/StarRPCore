@@ -30,7 +30,16 @@ public class infencCompleter implements TabCompleter {
                 encants.add(effect.getName());
             }
         } else if (args.length == 3) {
-            encants.add("level");
+            encants.add("(Level)");
+            encants.add("1");
+            encants.add("2");
+            encants.add("3");
+            encants.add("4");
+            encants.add("5");
+        } else if (args.length == 4) {
+            encants.add("(Particles)");
+            encants.add("true");
+            encants.add("false");
         }
 
         return encants;
