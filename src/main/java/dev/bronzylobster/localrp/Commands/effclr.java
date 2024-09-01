@@ -10,6 +10,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class effclr extends AbstractCommand{
@@ -34,14 +35,17 @@ public class effclr extends AbstractCommand{
         if (len == 1) {
             db.remove(s[0]);
 
-            Collection<PotionEffect> effs = p.getActivePotionEffects();
+            ArrayList<String> effs = db.getEffects(s[0]);
 
-                    for (PotionEffect eff: effs) {
-                        p.removePotionEffect(eff.getType());
-                    }
+            for (String eff: effs) {
+                p.removePotionEffect(PotionEffectType.getByName(eff));
+            }
+
+            sender.sendMessage("C игрока " + s[0] + " сняты все вечные эффекты");
         } else if (len == 2){
             db.remove(s[0], s[1]);
             p.removePotionEffect(PotionEffectType.getByName(s[1]));
+            sender.sendMessage("C игрока " + s[0] + " снят вечный эффект " + s[1]);
         }
     }
 }
