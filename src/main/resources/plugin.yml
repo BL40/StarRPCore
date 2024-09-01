@@ -2,9 +2,9 @@ name: LocalRP
 version: '${project.version}'
 main: dev.bronzylobster.localrp.LocalRP
 api-version: 1.20
-prefix: DNCRP
+prefix: LocalRP
 authors: [BL40]
-description: Special for DNC
+description: Special for Formalgaut
 permissions:
   DNCRP.me:
     default: true
@@ -22,5 +22,9 @@ commands:
     aliases: roll
   fix:
     permission: dncfix
-  hub:
-    aliases: lobby
+  effclr:
+    permission: lrp.eff
+    aliases: effectclear
+  infeff:
+    permission: lrp.eff
+    aliases: infiniteeffect

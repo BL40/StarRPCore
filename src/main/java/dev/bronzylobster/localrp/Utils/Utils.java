@@ -55,7 +55,7 @@ public class Utils {
         try {
             return NumberUtils.createInteger(sNum);
         } catch (NumberFormatException e) {
-            p.sendMessage(Component.text("Value is not number").color(TextColor.color(0xFF0000)).clickEvent(ClickEvent.openUrl("https://www.youtube.com/watch?v=dQw4w9WgXcQ")));
+            p.sendMessage(Component.text("Value is not number").color(TextColor.color(0xFF0000)).clickEvent(ClickEvent.openUrl("")));
             return 0;
         }
     }

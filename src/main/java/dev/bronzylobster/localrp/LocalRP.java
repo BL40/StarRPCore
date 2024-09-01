@@ -28,9 +28,9 @@ public final class LocalRP extends JavaPlugin {
         new loctry();
         new locroll();
         new fix();
-        new hub();
+        new effclr();
+        new infeff();
 
-        // Plugin startup logic
         scoreboard = getServer().getScoreboardManager().getMainScoreboard();
 
         if (scoreboard.getTeam("hide") == null) {
@@ -42,6 +42,7 @@ public final class LocalRP extends JavaPlugin {
         }
 
         getServer().getPluginManager().registerEvents(new HideNames(), this);
+        getServer().getPluginManager().registerEvents(new Eff(), this);
     }
 
     @Override

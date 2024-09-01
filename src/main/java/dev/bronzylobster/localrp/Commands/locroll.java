@@ -25,7 +25,7 @@ public class locroll extends AbstractCommand{
         } else if (max < config.getInt("RollMin")) {
             max = config.getInt("RollMin");
         }
-        int res = (int) (Math.random() * max + 1);
+        int res = (int) ((Math.random() * max) + 1);
 
         Component msg = Utils.Placeholders(config.getString("RollFormat"), sender, String.valueOf(res), s, String.valueOf(max));
 
