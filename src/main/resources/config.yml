@@ -9,3 +9,13 @@ RollFormat: "&5*%player% подбросил кубик, на котором %max
 RollMax: 100
 RollMin: 0
 Radius: 100.0
+RPParams:
+  parameters:
+    - name
+    - height
+    - weight
+    - age
+  format:
+    - "%player% info"
+    - "name: %name%"
+    - имя плейсхолдера должно совпадать с названием параметра сверху

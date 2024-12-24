@@ -1,6 +1,7 @@
 package dev.bronzylobster.localrp.Utils;
 
 import dev.bronzylobster.localrp.LocalRP;
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.format.TextColor;
@@ -42,6 +43,7 @@ public class Utils {
                 .replace("%result%", sResult)
                 .replace("%message%", srMSG)
                 .replace("%max%", max);
+        sMSG = PlaceholderAPI.setPlaceholders(p, sMSG);
 
         return minimessage.deserialize(sMSG);
     }
@@ -55,7 +57,7 @@ public class Utils {
         try {
             return NumberUtils.createInteger(sNum);
         } catch (NumberFormatException e) {
-            p.sendMessage(Component.text("Value is not number").color(TextColor.color(0xFF0000)).clickEvent(ClickEvent.openUrl("")));
+            p.sendMessage(Component.text("Value is not number").color(TextColor.color(0xFF0000)).clickEvent(ClickEvent.openUrl("https://www.youtube.com/watch?v=L1YkydtyTt8")));
             return 0;
         }
     }

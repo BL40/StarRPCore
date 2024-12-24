@@ -2,20 +2,27 @@ name: LocalRP
 version: '${project.version}'
 main: dev.bronzylobster.localrp.LocalRP
 api-version: 1.20
+depend: [PlaceholderAPI]
 prefix: LocalRP
 authors: [BL40]
-description: Special for Formalgaut
+description: Special for Fomalgaut
 permissions:
   DNCRP.me:
     default: true
   dncfix:
     default: op
+  lrp.eff:
+    default: op
 commands:
+  gme:
+    aliases: cme
   locme:
     aliases: [me, mee]
     permission: DNCRP.me
   locdo:
     aliases: do
+  gdo:
+    aliases: cdo
   loctry:
     aliases: try
   locroll:
@@ -28,3 +35,6 @@ commands:
   infeff:
     permission: lrp.eff
     aliases: infiniteeffect
+  pinfo:
+    aliases: playerinfo
+

@@ -2,12 +2,10 @@ package dev.bronzylobster.localrp;
 
 import dev.bronzylobster.localrp.Commands.*;
 import lombok.Getter;
-import org.bukkit.Server;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
+import org.simpleyaml.configuration.file.YamlFile;
 
 public final class LocalRP extends JavaPlugin {
 
@@ -16,6 +14,8 @@ public final class LocalRP extends JavaPlugin {
     private Scoreboard scoreboard;
     @Getter
     private Team team;
+    @Getter
+    private YamlFile ymlparams;
 
     @Override
     public void onEnable() {
@@ -23,13 +23,26 @@ public final class LocalRP extends JavaPlugin {
 
         saveDefaultConfig();
 
+        ymlparams = new YamlFile("LocalRP/parameters.yml");
+        try {
+            if (!ymlparams.exists()) {
+                ymlparams.createNewFile();
+            }
+            ymlparams.load();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         new locme();
+        new gme();
         new locdo();
+        new gdo();
         new loctry();
         new locroll();
         new fix();
         new effclr();
         new infeff();
+        new pinfo();
 
         scoreboard = getServer().getScoreboardManager().getMainScoreboard();
 
