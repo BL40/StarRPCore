@@ -12,7 +12,6 @@ import org.bukkit.event.player.PlayerCommandSendEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scoreboard.Team;
 
 import java.util.Collection;
@@ -21,9 +20,9 @@ import static org.bukkit.potion.PotionEffectType.*;
 
 public class HideNames implements Listener {
 
-    Team team = LocalRP.getInstance().getTeam();
+    Team team = StarRPCore.getInstance().getTeam();
 
-    FileConfiguration config = LocalRP.getInstance().getConfig();
+    FileConfiguration config = StarRPCore.getInstance().getConfig();
 
     @EventHandler
     public void joinListener(PlayerJoinEvent e) {

@@ -1,17 +1,17 @@
 package dev.bronzylobster.localrp.Commands;
 
-import dev.bronzylobster.localrp.LocalRP;
+import dev.bronzylobster.localrp.StarRPCore;
 import org.bukkit.command.*;
 import org.jetbrains.annotations.NotNull;
 
 public abstract class AbstractCommand implements CommandExecutor {
 
     public AbstractCommand (String name) {
-        LocalRP.getInstance().getCommand(name).setExecutor(this);
+        StarRPCore.getInstance().getCommand(name).setExecutor(this);
     }
 
     public AbstractCommand(String command, TabCompleter completer) {
-        PluginCommand pluginCommand = LocalRP.getInstance().getCommand(command);
+        PluginCommand pluginCommand = StarRPCore.getInstance().getCommand(command);
         if (pluginCommand != null) {
             pluginCommand.setExecutor(this);
             pluginCommand.setTabCompleter(completer);

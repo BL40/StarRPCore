@@ -1,6 +1,6 @@
 package dev.bronzylobster.localrp.Commands;
 
-import dev.bronzylobster.localrp.LocalRP;
+import dev.bronzylobster.localrp.StarRPCore;
 import dev.bronzylobster.localrp.Utils.Utils;
 import net.kyori.adventure.text.Component;
 import org.bukkit.command.CommandSender;
@@ -15,7 +15,7 @@ public class locroll extends AbstractCommand{
         super("locroll");
     }
 
-    FileConfiguration config = LocalRP.getInstance().getConfig();
+    FileConfiguration config = StarRPCore.getInstance().getConfig();
 
     @Override
     public void execute(CommandSender sender, String[] s) {
@@ -38,6 +38,6 @@ public class locroll extends AbstractCommand{
                     viewer.sendMessage(msg);
                 }
             }
-        }.runTaskAsynchronously(LocalRP.getInstance());
+        }.runTaskAsynchronously(StarRPCore.getInstance());
     }
 }

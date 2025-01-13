@@ -7,10 +7,10 @@ import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 import org.simpleyaml.configuration.file.YamlFile;
 
-public final class LocalRP extends JavaPlugin {
+public final class StarRPCore extends JavaPlugin {
 
     @Getter
-    private static LocalRP instance;
+    private static StarRPCore instance;
     private Scoreboard scoreboard;
     @Getter
     private Team team;
@@ -33,6 +33,7 @@ public final class LocalRP extends JavaPlugin {
             e.printStackTrace();
         }
 
+        new gravity();
         new locme();
         new gme();
         new locdo();

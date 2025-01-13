@@ -1,9 +1,8 @@
 package dev.bronzylobster.localrp.Commands;
 
-import dev.bronzylobster.localrp.LocalRP;
+import dev.bronzylobster.localrp.StarRPCore;
 import net.kyori.adventure.text.Component;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -16,7 +15,7 @@ public class fix extends AbstractCommand{
 
     @Override
     public void execute(CommandSender sender, String[] s) {
-        Collection<? extends Player> op = LocalRP.getInstance().getServer().getOnlinePlayers();
+        Collection<? extends Player> op = StarRPCore.getInstance().getServer().getOnlinePlayers();
 
         new BukkitRunnable() {
             @Override
@@ -26,6 +25,6 @@ public class fix extends AbstractCommand{
                     p.displayName(Component.text(p.getName()));
                 }
             }
-        }.runTaskAsynchronously(LocalRP.getInstance());
+        }.runTaskAsynchronously(StarRPCore.getInstance());
     }
 }

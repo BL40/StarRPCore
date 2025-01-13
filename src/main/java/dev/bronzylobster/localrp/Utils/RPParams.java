@@ -1,20 +1,17 @@
 package dev.bronzylobster.localrp.Utils;
 
-import dev.bronzylobster.localrp.LocalRP;
-import lombok.Getter;
+import dev.bronzylobster.localrp.StarRPCore;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.simpleyaml.configuration.file.YamlFile;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class RPParams {
 
-    static FileConfiguration config = LocalRP.getInstance().getConfig();
-    final static YamlFile ymlParams = LocalRP.getInstance().getYmlparams();
+    static FileConfiguration config = StarRPCore.getInstance().getConfig();
+    final static YamlFile ymlParams = StarRPCore.getInstance().getYmlparams();
     private static List<String> params = new ArrayList<>();
     public static  void setDefaultParams() {
         params = config.getStringList("RPParams.parameters");
@@ -41,7 +38,7 @@ public class RPParams {
                         e.printStackTrace();
                     }
                 }
-            }.runTaskAsynchronously(LocalRP.getInstance());
+            }.runTaskAsynchronously(StarRPCore.getInstance());
         }
     }
 

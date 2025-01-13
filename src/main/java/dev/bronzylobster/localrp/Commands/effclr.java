@@ -1,17 +1,13 @@
 package dev.bronzylobster.localrp.Commands;
 
 import dev.bronzylobster.localrp.Completers.effclrCompleter;
-import dev.bronzylobster.localrp.LocalRP;
 import dev.bronzylobster.localrp.Utils.DataBase;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class effclr extends AbstractCommand{
 

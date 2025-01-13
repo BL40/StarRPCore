@@ -1,6 +1,6 @@
 package dev.bronzylobster.localrp.Commands;
 
-import dev.bronzylobster.localrp.LocalRP;
+import dev.bronzylobster.localrp.StarRPCore;
 import dev.bronzylobster.localrp.Utils.RPParams;
 import dev.bronzylobster.localrp.Utils.Utils;
 import net.kyori.adventure.text.Component;
@@ -16,9 +16,9 @@ import java.util.List;
 public class pinfo extends AbstractCommand {
 
     public pinfo(){super("pinfo");}
-    final YamlFile ymlParams = LocalRP.getInstance().getYmlparams();
+    final YamlFile ymlParams = StarRPCore.getInstance().getYmlparams();
     public List<String> params = RPParams.getParams();
-    @NotNull FileConfiguration config = LocalRP.getInstance().getConfig();
+    @NotNull FileConfiguration config = StarRPCore.getInstance().getConfig();
 
     @Override
     public void execute(CommandSender sender, String[] s) {
@@ -37,6 +37,6 @@ public class pinfo extends AbstractCommand {
                     sender.sendMessage(msg[0]);
                 }
             }
-        }.runTaskAsynchronously(LocalRP.getInstance());
+        }.runTaskAsynchronously(StarRPCore.getInstance());
     }
 }

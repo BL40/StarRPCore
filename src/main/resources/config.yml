@@ -9,6 +9,8 @@ RollFormat: "&5*%player% подбросил кубик, на котором %max
 RollMax: 100
 RollMin: 0
 Radius: 100.0
+GravitySpeed: 1.0
+DefaultSpeed: 0.1
 RPParams:
   parameters:
     - name
