@@ -33,7 +33,6 @@ public final class StarRPCore extends JavaPlugin {
             e.printStackTrace();
         }
 
-        new gravity();
         new locme();
         new gme();
         new locdo();
