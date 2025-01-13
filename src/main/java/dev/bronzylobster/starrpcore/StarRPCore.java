@@ -40,8 +40,6 @@ public final class StarRPCore extends JavaPlugin {
         new loctry();
         new locroll();
         new fix();
-        new effclr();
-        new infeff();
         new pinfo();
 
         scoreboard = getServer().getScoreboardManager().getMainScoreboard();
@@ -55,7 +53,6 @@ public final class StarRPCore extends JavaPlugin {
         }
 
         getServer().getPluginManager().registerEvents(new HideNames(), this);
-        getServer().getPluginManager().registerEvents(new Eff(), this);
     }
 
     @Override
