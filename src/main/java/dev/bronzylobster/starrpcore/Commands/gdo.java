@@ -1,7 +1,8 @@
-package dev.bronzylobster.localrp.Commands;
+package dev.bronzylobster.starrpcore.Commands;
 
-import dev.bronzylobster.localrp.StarRPCore;
-import dev.bronzylobster.localrp.Utils.Utils;
+import dev.bronzylobster.starrpcore.StarRPCore;
+import dev.bronzylobster.starrpcore.Utils.MessageManager;
+import dev.bronzylobster.starrpcore.Utils.Utils;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -10,17 +11,22 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
-public class gme extends AbstractCommand{
-    public gme() {
-        super("gme");
+public class gdo extends AbstractCommand{
+    public gdo() {
+        super("gdo");
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();
+    MessageManager messageManager = new MessageManager(StarRPCore.getInstance());
+    private final Map<String, String> message = new HashMap<>();
 
     @Override
     public void execute(CommandSender sender, String[] s) {
-        Component msg = Utils.Placeholders(config.getString("MeFormat"), sender, "NULL", s, "NULL");
+        message.put("message", messageManager.messageParserToString(s));
+        Component msg = messageManager.messageToComponent(messageManager.getPlaceholders((Player) sender, "DoFormat", message));
 
         Collection<? extends Player> viewers = Bukkit.getOnlinePlayers();
 
@@ -34,3 +40,4 @@ public class gme extends AbstractCommand{
         }.runTaskAsynchronously(StarRPCore.getInstance());
     }
 }
+

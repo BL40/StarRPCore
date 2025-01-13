@@ -1,6 +1,6 @@
-package dev.bronzylobster.localrp.Commands;
+package dev.bronzylobster.starrpcore.Commands;
 
-import dev.bronzylobster.localrp.StarRPCore;
+import dev.bronzylobster.starrpcore.StarRPCore;
 import org.bukkit.command.*;
 import org.jetbrains.annotations.NotNull;
 

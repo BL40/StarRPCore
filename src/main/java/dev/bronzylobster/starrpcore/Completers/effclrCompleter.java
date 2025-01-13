@@ -1,12 +1,11 @@
-package dev.bronzylobster.localrp.Completers;
+package dev.bronzylobster.starrpcore.Completers;
 
-import dev.bronzylobster.localrp.Utils.DataBase;
+import dev.bronzylobster.starrpcore.Utils.DataBase;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
-import org.bukkit.potion.PotionEffectType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

@@ -1,6 +1,6 @@
-package dev.bronzylobster.localrp;
+package dev.bronzylobster.starrpcore;
 
-import dev.bronzylobster.localrp.Utils.RPParams;
+import dev.bronzylobster.starrpcore.Utils.RPParams;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;

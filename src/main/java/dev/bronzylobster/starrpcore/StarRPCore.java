@@ -1,6 +1,6 @@
-package dev.bronzylobster.localrp;
+package dev.bronzylobster.starrpcore;
 
-import dev.bronzylobster.localrp.Commands.*;
+import dev.bronzylobster.starrpcore.Commands.*;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Scoreboard;

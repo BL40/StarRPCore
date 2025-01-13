@@ -1,8 +1,8 @@
-package dev.bronzylobster.localrp.Commands;
+package dev.bronzylobster.starrpcore.Commands;
 
-import dev.bronzylobster.localrp.StarRPCore;
-import dev.bronzylobster.localrp.Utils.RPParams;
-import dev.bronzylobster.localrp.Utils.Utils;
+import dev.bronzylobster.starrpcore.StarRPCore;
+import dev.bronzylobster.starrpcore.Utils.RPParams;
+import dev.bronzylobster.starrpcore.Utils.Utils;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;

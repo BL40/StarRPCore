@@ -1,4 +1,4 @@
-package dev.bronzylobster.localrp.Utils;
+package dev.bronzylobster.starrpcore.Utils;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
@@ -13,40 +13,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Utils {
-    public static Component Placeholders (String msg, CommandSender cs, String result, String[] s, String max){
-        Player p = (Player) cs;
-
-        Component cMSG = LegacyComponentSerializer.legacyAmpersand().deserialize(msg);
-        Component name = p.playerListName();
-        Component cResult = LegacyComponentSerializer.legacyAmpersand().deserialize(result);
-        Component crMSG = messageParser(s);
-
-        MiniMessage minimessage = MiniMessage.builder()
-                .tags(TagResolver.builder()
-                        .resolver(StandardTags.color())
-                        .resolver(StandardTags.decorations())
-                        .build()
-                )
-                .build();
-        String sMSG = minimessage.serialize(cMSG);
-        String sName = minimessage.serialize(name);
-        String sResult = minimessage.serialize(cResult);
-        String srMSG = minimessage.serialize(crMSG);
-
-        sMSG = sMSG
-                .replace("%player%", sName)
-                .replace("%result%", sResult)
-                .replace("%message%", srMSG)
-                .replace("%max%", max);
-        sMSG = PlaceholderAPI.setPlaceholders(p, sMSG);
-
-        return minimessage.deserialize(sMSG);
-    }
-
-    public static Component messageParser (String[] s){
-        String msg = String.join(" ", s);
-        return LegacyComponentSerializer.legacyAmpersand().deserialize(msg);
-    }
 
     public static int getNumber (String sNum, CommandSender p) throws NumberFormatException{
         try {

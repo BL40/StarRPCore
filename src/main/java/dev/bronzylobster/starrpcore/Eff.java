@@ -1,7 +1,7 @@
-package dev.bronzylobster.localrp;
+package dev.bronzylobster.starrpcore;
 
 import com.destroystokyo.paper.event.player.PlayerPostRespawnEvent;
-import dev.bronzylobster.localrp.Utils.DataBase;
+import dev.bronzylobster.starrpcore.Utils.DataBase;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

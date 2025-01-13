@@ -1,6 +1,6 @@
-package dev.bronzylobster.localrp.Utils;
+package dev.bronzylobster.starrpcore.Utils;
 
-import dev.bronzylobster.localrp.StarRPCore;
+import dev.bronzylobster.starrpcore.StarRPCore;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.simpleyaml.configuration.file.YamlFile;

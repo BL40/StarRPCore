@@ -1,4 +1,4 @@
-package dev.bronzylobster.localrp.Utils;
+package dev.bronzylobster.starrpcore.Utils;
 
 import java.sql.*;
 import java.util.ArrayList;

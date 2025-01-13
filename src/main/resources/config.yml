@@ -1,16 +1,15 @@
 Enabled: true
 HideNames: true
-MeFormat: "&5*%player% %message%"
-DoFormat: "&5*%player%* %message%"
-TryFormat: "&5*%player% %message% &r| &5%result%"
-TryWin: "&aУспех"
-TryLose: "&cПровал"
-RollFormat: "&5*%player% подбросил кубик, на котором %max% граней &r| &5Выпало число &a%result%"
+messages:
+  MeFormat: "&5*%player% %message%"
+  DoFormat: "&5*%player%* %message%"
+  TryFormat: "&5*%player% %message% &r| &5%result%"
+  TryWin: "&aУспех"
+  TryLose: "&cПровал"
+  RollFormat: "&5*%player% подбросил кубик, на котором %max% граней &r| &5Выпало число &a%result%"
 RollMax: 100
 RollMin: 0
 Radius: 100.0
-GravitySpeed: 1.0
-DefaultSpeed: 0.1
 RPParams:
   parameters:
     - name

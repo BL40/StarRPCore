@@ -1,8 +1,8 @@
-package dev.bronzylobster.localrp.Commands;
+package dev.bronzylobster.starrpcore.Commands;
 
-import dev.bronzylobster.localrp.Completers.infencCompleter;
-import dev.bronzylobster.localrp.Utils.DataBase;
-import dev.bronzylobster.localrp.Utils.Utils;
+import dev.bronzylobster.starrpcore.Completers.infencCompleter;
+import dev.bronzylobster.starrpcore.Utils.DataBase;
+import dev.bronzylobster.starrpcore.Utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

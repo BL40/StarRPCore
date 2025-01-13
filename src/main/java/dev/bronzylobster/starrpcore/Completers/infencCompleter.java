@@ -1,7 +1,6 @@
-package dev.bronzylobster.localrp.Completers;
+package dev.bronzylobster.starrpcore.Completers;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Effect;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
