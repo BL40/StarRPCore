@@ -6,7 +6,7 @@
 
     <groupId>dev.bronzylobster</groupId>
     <artifactId>StarRPCore</artifactId>
-    <version>1.17.0-62</version>
+    <version>1.17.1-63</version>
     <packaging>jar</packaging>
 
     <name>StarRPCore</name>
