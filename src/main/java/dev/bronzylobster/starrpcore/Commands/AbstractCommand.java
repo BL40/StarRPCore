@@ -2,16 +2,19 @@ package dev.bronzylobster.starrpcore.Commands;
 
 import dev.bronzylobster.starrpcore.StarRPCore;
 import org.bukkit.command.*;
+import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
+
+import javax.tools.JavaCompiler;
 
 public abstract class AbstractCommand implements CommandExecutor {
 
-    public AbstractCommand (String name) {
-        StarRPCore.getInstance().getCommand(name).setExecutor(this);
+    public AbstractCommand (String name, JavaPlugin plugin) {
+        plugin.getCommand(name).setExecutor(this);
     }
 
-    public AbstractCommand(String command, TabCompleter completer) {
-        PluginCommand pluginCommand = StarRPCore.getInstance().getCommand(command);
+    public AbstractCommand(String command, TabCompleter completer, JavaPlugin plugin) {
+        PluginCommand pluginCommand = plugin.getCommand(command);
         if (pluginCommand != null) {
             pluginCommand.setExecutor(this);
             pluginCommand.setTabCompleter(completer);

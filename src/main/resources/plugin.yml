@@ -1,11 +1,13 @@
 name: StarRPCore
 version: '${project.version}'
-main: dev.bronzylobster.localrp.LocalRP
+main: dev.bronzylobster.starrpcore.StarRPCore
 api-version: 1.21
 depend: [PlaceholderAPI]
 prefix: StarRPCore
 authors: [BL40]
 description: Special for Fomalgaut
+loadbefore:
+  - StarRPGravity
 permissions:
   DNCRP.me:
     default: true

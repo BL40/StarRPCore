@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class locme extends AbstractCommand{
     public locme() {
-        super("locme");
+        super("locme", StarRPCore.getInstance());
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();

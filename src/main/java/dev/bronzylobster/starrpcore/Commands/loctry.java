@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class loctry extends AbstractCommand{
     public loctry() {
-        super("loctry");
+        super("loctry", StarRPCore.getInstance());
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();

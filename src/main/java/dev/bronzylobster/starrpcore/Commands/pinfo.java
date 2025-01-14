@@ -19,7 +19,7 @@ import java.util.Map;
 
 public class pinfo extends AbstractCommand {
 
-    public pinfo(){super("pinfo");}
+    public pinfo(){super("pinfo", StarRPCore.getInstance());}
     final YamlFile ymlParams = StarRPCore.getInstance().getYmlparams();
     public List<String> params = RPParams.getParams();
     @NotNull FileConfiguration config = StarRPCore.getInstance().getConfig();

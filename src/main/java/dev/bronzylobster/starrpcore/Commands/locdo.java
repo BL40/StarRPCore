@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class locdo extends AbstractCommand{
     public locdo() {
-        super("locdo");
+        super("locdo", StarRPCore.getInstance());
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();

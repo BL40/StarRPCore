@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class gme extends AbstractCommand{
     public gme() {
-        super("gme");
+        super("gme", StarRPCore.getInstance());
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();

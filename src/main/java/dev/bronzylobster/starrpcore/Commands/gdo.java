@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class gdo extends AbstractCommand{
     public gdo() {
-        super("gdo");
+        super("gdo", StarRPCore.getInstance());
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();

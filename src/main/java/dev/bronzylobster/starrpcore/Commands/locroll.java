@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class locroll extends AbstractCommand{
     public locroll() {
-        super("locroll");
+        super("locroll", StarRPCore.getInstance());
     }
 
     FileConfiguration config = StarRPCore.getInstance().getConfig();

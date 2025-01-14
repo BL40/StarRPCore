@@ -10,7 +10,7 @@ import java.util.Collection;
 
 public class fix extends AbstractCommand{
     public fix() {
-        super("fix");
+        super("fix", StarRPCore.getInstance());
     }
 
     @Override
